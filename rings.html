@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIS Project Repository</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+   <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand active fs-5" href="#">𝓐𝓘𝓢𝓨𝓐𝓗 𝓙𝓔𝓦𝓔𝓛𝓛𝓔𝓡𝓨</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Menu kiri -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active fs-5" href="dashboard.html">DASHBOARD</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link active fs-5 dropdown-toggle" href="Product.html" role="button" data-bs-toggle="dropdown">
+            PRODUCTS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="bracelets.html">Bracelets</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="necklaces.html">Necklaces</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active fs-5" href="about.html">ABOUT US</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active fs-5" href="order-list.html">ORDER</a>
+        </li>
+      </ul>
+
+      <!-- Menu kanan -->
+      <div class="d-flex align-items-center">
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-toggle btn btn-sm btn-outline-secondary me-2" id="darkModeToggle" title="Toggle dark Mode">
+          <i class="bi bi-moon-stars-fill" id="darkModeIcon"></i>
+        </button>
+
+        <!-- Cart Icon -->
+        <a class="nav-link fs-5 cart-icon" href="cart.html">
+          <i class="bi bi-cart-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+<!-- Header Rings -->
+<div class="container text-center my-5">
+  <h1 class="display-4 fw-bold header-title">
+    Rings Collection
+  </h1>
+  <p class="lead header-subtitle">
+    "Discover timeless rings crafted with elegance."
+  </p>
+</div>
+
+<!-- 6 Card Atas (3 + 3) -->
+<div class="container my-5">
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/produk2.png" class="card-img-top" style="height:300px; object-fit:cover;  " alt="Bracelet10">
+        <div class="card-body text-center">
+          <h5 class="card-title">Eternal Daisy Bloom Amethyst Ring</h5>
+          <p class="card-text">RM180.00</p>
+          <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Eternal Daisy Bloom Amethyst Ring">
+              <input type="hidden" name="product_price" value="180.00">
+               <label>Quantity:</label>
+                <input type="number" id="qty-necklace11" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Celestial Frost Radiance Necklace"
+                data-price="500.00"
+                data-qty-id="qty-necklace11">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings1.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings1">
+        <div class="card-body text-center">
+          <h5 class="card-title">Celestial Lotus Quartz Ring</h5>
+          <p class="card-text">RM295.00</p>
+          <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Celestial Lotus Quartz Ring">
+              <input type="hidden" name="product_price" value="295.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring2" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Celestial Lotus Quartz Ring"
+                data-price="295.00"
+                data-qty-id="qty-ring2">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings2(1).png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings2">
+        <div class="card-body text-center">
+          <h5 class="card-title">Goldenflower Citrine Ring</h5>
+          <p class="card-text">RM310.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Goldenflower Citrine Ring">
+              <input type="hidden" name="product_price" value="310.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring3" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Goldenflower Citrine Ring"
+                data-price="310.00"
+                data-qty-id="qty-ring3">Add to Cart</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Card 4 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings3(1).png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings3">
+        <div class="card-body text-center">
+          <h5 class="card-title">Mystic Orchid Moonstone Ring</h5>
+          <p class="card-text">RM330.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Mystic Orchid Moonstone Ring">
+              <input type="hidden" name="product_price" value="330.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring4" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Mystic Orchid Moonstone Ring"
+                data-price="330.00"
+                data-qty-id="qty-ring4">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings4.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings4">
+        <div class="card-body text-center">
+          <h5 class="card-title">Crimson Love Garnet Ring</h5>
+          <p class="card-text">RM299.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Crimson Love Garnet Ring">
+              <input type="hidden" name="product_price" value="299.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring5" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Crimson Love Garnet Ring"
+                data-price="299.00"
+                data-qty-id="qty-ring5">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings5.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings5">
+        <div class="card-body text-center">
+          <h5 class="card-title">Aurora Sapphire Bloom Ring</h5>
+          <p class="card-text">RM489.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Aurora Sapphire Bloom Ring">
+              <input type="hidden" name="product_price" value="489.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring6" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Aurora Sapphire Bloom Ring"
+                data-price="489.00"
+                data-qty-id="qty-ring6">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ayat Tengah -->
+<div class="container text-center my-5">
+  <h2 class="middle-title fw-bold">Our Collection</h2>
+  <p class="middle-subtitle">More designs to explore below</p>
+  <div class="divider"></div>
+</div>
+
+<!-- 6 Card Bawah (3 + 3) -->
+<div class="container my-5">
+  <div class="row">
+    <!-- Card 7 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings6.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings6">
+        <div class="card-body text-center">
+          <h5 class="card-title">Violet Étoile Amour Ring</h5>
+          <p class="card-text">RM350.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Violet Étoile Amour Ring">
+              <input type="hidden" name="product_price" value="350.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring7" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Violet Étoile Amour Ring"
+                data-price="350.00"
+                data-qty-id="qty-ring7">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings7.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings7">
+        <div class="card-body text-center">
+          <h5 class="card-title">Imperial Pearl Glow Ring</h5>
+          <p class="card-text">RM265.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Imperial Pearl Glow Ring">
+              <input type="hidden" name="product_price" value="265.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring8" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Imperial Pearl Glow Ring"
+                data-price="265.00"
+                data-qty-id="qty-ring8">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 9 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings8.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings8">
+        <div class="card-body text-center">
+          <h5 class="card-title">Majestic Ruby Radiance Ring</h5>
+          <p class="card-text">RM355.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Majestic Ruby Radiance Ring">
+              <input type="hidden" name="product_price" value="355.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring9" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Majestic Ruby Radiance Ring"
+                data-price="355.00"
+                data-qty-id="qty-ring9">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Card 10 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings9.png" class="card-img-top" style="height:300px; object-fit:cover;  " alt="Rings9">
+        <div class="card-body text-center">
+          <h5 class="card-title">Aurora Frost Amethyst Ring</h5>
+          <p class="card-text">RM410.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Aurora Frost Amethyst Ring">
+              <input type="hidden" name="product_price" value="410.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring10" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Aurora Frost Amethyst Ring"
+                data-price="410.00"
+                data-qty-id="qty-ring10">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 11 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings10.png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings10">
+        <div class="card-body text-center">
+          <h5 class="card-title">Luna Mystique Garnet Ring </h5>
+          <p class="card-text">RM660.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Luna Mystique Garnet Ring">
+              <input type="hidden" name="product_price" value="660.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring11" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Luna Mystique Garnet Ring"
+                data-price="660.00"
+                data-qty-id="qty-ring11">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Card 12 -->
+    <div class="col-md-4 mb-4">
+      <div class="card product-card">
+        <img src="images/rings11(1).png" class="card-img-top" style="height:300px; object-fit:cover;" alt="Rings11">
+        <div class="card-body text-center">
+          <h5 class="card-title">Orchid Moonstone Grace Ring </h5>
+          <p class="card-text">RM389.00</p>
+            <!-- Add to Cart form -->
+            <form action="cart.html" method="POST">
+              <input type="hidden" name="action" value="add">
+              <input type="hidden" name="product_name" value="Orchid Moonstone Grace Ring">
+              <input type="hidden" name="product_price" value="389.00">
+              <label>Quantity:</label>
+                <input type="number" id="qty-ring12" value="1" min="1">
+                <button class="btn btn-success add-to-cart"
+                 data-name="Orchid Moonstone Grace Ring"
+                data-price="389.00"
+                data-qty-id="qty-ring12">Add to Cart</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center py-3" style="background-color:#796d39; color:white; padding:20px; text-align:center;">
+      <p class="mb-2 fw-bold">Discover timeless jewellery pieces crafted with elegance and passion.</p>
+      <div class="social-icons mb-2">
+        <a href="#"><i class="bi bi-facebook text-white mx-2 fs-5"></i></a>
+        <a href="#"><i class="bi bi-instagram text-white mx-2 fs-5"></i></a>
+        <a href="#"><i class="bi bi-twitter text-white mx-2 fs-5"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2026 Aisyah Jewellery. All rights reserved.</p>
+    </div>
+</footer>
+      
+<!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+   
+
+    <!-- Darkmode Toggle Switch JS -->
+     <script>
+        // get reference
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const htmlElement = document.documentElement;
+
+        // check save theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-bs-theme',currentTheme);
+        updateIcon(currentTheme);
+
+        //Toggle darkmode
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        //Update icon
+        function updateIcon(theme){
+            if (theme === 'dark'){
+                darkModeIcon.className = 'bi bi-sun-fill';
+            } else {
+                darkModeIcon.className = 'bi bi-moon-stars-fill'
+            }
+        }
+     </script>
+
+     <script>
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.dataset.name;
+      const price = parseFloat(button.dataset.price);
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let found = cart.find(item => item.name === name);
+
+      if (found) {
+        found.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(name + " added to cart!");
+    });
+  });
+</script>
+
+
+    
+
+</body>
+</html>
