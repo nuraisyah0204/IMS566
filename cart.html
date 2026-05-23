@@ -195,5 +195,40 @@
   // Initial render
   renderCart();
 </script>
+
+  <script>
+    // Ambil data cart dari localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartContainer = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      let total = 0;
+      cart.forEach(item => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+cartContainer.innerHTML += '
+          <div class="card mb-2 p-2">
+            <div class="d-flex align-items-center">
+              <img src="${item.image}" alt="${item.name}" width="80" class="me-3">
+              <div>
+                <h5>${item.name}</h5>
+                <p>Quantity: ${item.qty}</p>
+                <p>Price: RM${item.price.toFixed(2)}</p>
+                <p><strong>Subtotal: RM${itemTotal.toFixed(2)}</strong></p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      cartTotal.textContent = `Total: RM${total.toFixed(2)}`;
+    }
+  </script>
+
+
+
 </body>
 </html>
